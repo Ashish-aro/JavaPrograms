@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div>
       <div>
-        <div className="flex justify-between items-center text-sm border-b-2">
+        <div className="flex justify-between items-center text-sm border-b-2 ">
           <div className="ml-10">
             <i className="fa fa-location-dot"></i> 3517 W. Gray St. Utica,
             Pennsylvania 57867
