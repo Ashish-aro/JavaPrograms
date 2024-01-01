@@ -2,6 +2,7 @@ import React from "react";
 import HomePageSlider from "../../compnents/Slider/HomePageSlider";
 import ProductCard from "../../compnents/Card/ProductCard";
 import CategoryCard from "../../compnents/Card/CategoryCard";
+import img from "../../assets/images/Capture-removebg-preview.png";
 // const data = require('../../assets/api/data')
 
 export default function HomePage() {
@@ -679,8 +680,38 @@ export default function HomePage() {
         </div>
         <div className="flex justify-normal flex-wrap gap-14">
           {data.slice(17, 27).map((item) => {
-            return <CategoryCard category = {item}/>;
+            return <CategoryCard category={item} />;
           })}
+        </div>
+      </div>
+
+      {/* Special Product Deal Banner */}
+      <div className="bg-[#edf2ee]">
+        <div className="flex justify-normal items-center p-7 border border-red-500" style={{margin: "0px 50px 0px 50px"}}>
+          <div className="w-1/3">
+            <img src={img} alt="" />
+          </div>
+          <div className="w-1/3">
+            <p>BEST DEALS</p>
+            <h1>Our Special Products Deal of the Month</h1>
+            <div className="flex ">
+              <div className="">
+                00 <br /> Days
+              </div>
+              <div className="">
+                00 <br /> Days
+              </div>
+              <div className="">
+                00 <br /> Days
+              </div>
+              <div className="">
+                00 <br /> Days
+              </div>
+            </div>
+          </div>
+          <div className="w-1/3 ">
+            <img className="text-end" src={img} alt="" />
+          </div>
         </div>
       </div>
     </div>
