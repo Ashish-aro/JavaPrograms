@@ -2,7 +2,10 @@ import React from "react";
 import HomePageSlider from "../../compnents/Slider/HomePageSlider";
 import ProductCard from "../../compnents/Card/ProductCard";
 import CategoryCard from "../../compnents/Card/CategoryCard";
-import img from "../../assets/images/Capture-removebg-preview.png";
+import img1 from "../../assets/images/Capture-removebg-preview.png";
+import img2 from "../../assets/images/Capture_2-removebg-preview.png";
+import FeaturedCard from "../../compnents/Card/FeaturedCard";
+
 // const data = require('../../assets/api/data')
 
 export default function HomePage() {
@@ -686,32 +689,73 @@ export default function HomePage() {
       </div>
 
       {/* Special Product Deal Banner */}
-      <div className="bg-[#edf2ee]">
-        <div className="flex justify-normal items-center p-7 border border-red-500" style={{margin: "0px 50px 0px 50px"}}>
+      <div className="bg-[#edf2ee] m-0 p-0">
+        <div
+          className="flex justify-normal items-center px-10"
+          style={{ margin: "0px 50px 0px 50px" }}
+        >
           <div className="w-1/3">
-            <img src={img} alt="" />
+            <img className="h-[310px]" src={img1} alt="" />
           </div>
-          <div className="w-1/3">
-            <p>BEST DEALS</p>
-            <h1>Our Special Products Deal of the Month</h1>
-            <div className="flex ">
-              <div className="">
-                00 <br /> Days
+          <div className="w-1/3 text-center  ">
+            <p className="text-[10px] text-[#0b3b72] font-bold">BEST DEALS</p>
+            <h1 className="text-[24px] font-bold">
+              Our Special Products <br /> Deal of the Month
+            </h1>
+            <div className="flex justify-center items-center">
+              <div className="bg-white border h-[50px] w-[50px] mx-2">
+                <span className="text-[#0b3b72] font-semibold text-[20px] ">
+                  00
+                </span>
+                <br />
+                <span className="text-[8px] text-[#979797] ">DAYS</span>
               </div>
-              <div className="">
-                00 <br /> Days
+              :
+              <div className="bg-white border h-[50px] w-[50px] mx-2">
+                <span className="text-[#0b3b72] font-semibold text-[20px] ">
+                  00
+                </span>
+                <br />
+                <span className="text-[8px] text-[#979797] ">HOURS</span>
               </div>
-              <div className="">
-                00 <br /> Days
+              :
+              <div className="bg-white border h-[50px] w-[50px] mx-2">
+                <span className="text-[#0b3b72] font-semibold text-[20px] ">
+                  00
+                </span>
+                <br />
+                <span className="text-[8px] text-[#979797] ">MINS</span>
               </div>
-              <div className="">
-                00 <br /> Days
+              :
+              <div className="bg-white border h-[50px] w-[50px] mx-2">
+                <span className="text-[#0b3b72] font-semibold text-[20px] ">
+                  00
+                </span>
+                <br />
+                <span className="text-[8px] text-[#979797] ">SECS</span>
               </div>
             </div>
           </div>
-          <div className="w-1/3 ">
-            <img className="text-end" src={img} alt="" />
+          <div className="w-[467px]">
+            <img className="h-[310px]" src={img2} alt="" />
           </div>
+        </div>
+      </div>
+
+      {/* Featured Products */}
+      <div className="bg-[#f5f5f5]">
+        <div className="text-center py-10">
+          <h1 className="text-[40px] font-semibold">Featured Products</h1>
+        </div>
+        <div className="flex justify-start overflow-auto">
+          {data.slice(1, 8).map((item) => {
+            return <FeaturedCard featured={item} />;
+          })}
+        </div>
+        <div className="">
+          <div className=""></div>
+          <div className=""></div>
+          <div className=""></div>
         </div>
       </div>
     </div>
