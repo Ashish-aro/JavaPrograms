@@ -5,6 +5,9 @@ import CategoryCard from "../../compnents/Card/CategoryCard";
 import img1 from "../../assets/images/Capture-removebg-preview.png";
 import img2 from "../../assets/images/Capture_2-removebg-preview.png";
 import FeaturedCard from "../../compnents/Card/FeaturedCard";
+import HotDeals from "../../compnents/Card/HotDeals";
+import TopRated from "../../compnents/Card/TopRated";
+import img3 from "../../assets/images/person.png";
 
 // const data = require('../../assets/api/data')
 
@@ -752,10 +755,104 @@ export default function HomePage() {
             return <FeaturedCard featured={item} />;
           })}
         </div>
-        <div className="">
+
+        <div className="pl-1 flex justify-start pb-2">
+          {/* Hot Deals */}
+          <div className="mr-16">
+            <div className="py-5">
+              <h1 className="text-[22px] font-semibold">Hot Deals</h1>
+            </div>
+            <div className="">
+              {data.slice(0, 3).map((item) => {
+                return <HotDeals deals={item} />;
+              })}
+            </div>
+          </div>
+
+          {/* Top Rated */}
+          <div className="">
+            <div className="py-5">
+              <h1 className="text-[22px] font-semibold">Top Rated</h1>
+            </div>
+            <div className="">
+              {data.slice(3, 6).map((item) => {
+                return <TopRated rated={item} />;
+              })}
+            </div>
+          </div>
+
+          {/* Thin Banner */}
           <div className=""></div>
-          <div className=""></div>
-          <div className=""></div>
+        </div>
+      </div>
+
+      {/* Testimonials */}
+      <div className="m-10 text-center">
+        <h1 className="text-[36px] font-bold p-10">What our Client Says</h1>
+        <div className="flex justify-evenly items-center">
+          <div className="w-1/3">
+            <i className="fa fa-quote-right text-[40px] text-[#0b3b72]"></i>
+            <p className="p-10">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+              porro minus quae doloremque blanditiis quis rem nam et deleniti
+              hic possimus mollitia tenetur aspernatur ipsum sed velit dolor
+              eaque animi, impedit sapiente dignissimos rerum. Iste?
+            </p>
+            <div className="flex justify-center">
+              <img
+                className="h-[60px] w-[60px] rounded-full"
+                src={img3}
+                alt=""
+              />
+            </div>
+            <span className="font-bold text-[#0b3b72]">Person</span>
+            <br />
+            <span className="text-[13px] font-semibold text-[#919191]">
+              Costumer
+            </span>
+          </div>
+          <div className="w-1/3">
+            <i className="fa fa-quote-right text-[40px] text-[#0b3b72]"></i>
+            <p className="p-10">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, in
+              unde modi repudiandae animi velit error quo neque, deserunt fugit
+              culpa explicabo natus quos aliquid dolorum ratione eos beatae
+              corrupti ab! Doloremque laudantium ullam impedit.
+            </p>
+            <div className="flex justify-center">
+              <img
+                className="h-[60px] w-[60px] rounded-full"
+                src={img3}
+                alt=""
+              />
+            </div>
+            <span className="font-bold text-[#0b3b72]">Person</span>
+            <br />
+            <span className="text-[13px] font-semibold text-[#919191]">
+              Costumer
+            </span>
+          </div>
+          <div className="w-1/3">
+            <i className="fa fa-quote-right text-[40px] text-[#0b3b72]"></i>
+            <p className="p-10">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, in
+              unde modi repudiandae animi velit error quo neque, deserunt fugit
+              culpa explicabo natus quos aliquid dolorum ratione eos beatae
+              corrupti ab! Doloremque laudantium ullam impedit.
+            </p>
+            <div className="flex justify-center">
+              <img
+                className="h-[60px] w-[60px] rounded-full"
+                src={img3}
+                alt=""
+              />
+            </div>
+            <span className="font-bold text-[#0b3b72]">Person</span>
+            <br />
+            <span className="text-[13px] font-semibold text-[#919191]">
+              Costumer
+            </span>
+          </div>
         </div>
       </div>
     </div>

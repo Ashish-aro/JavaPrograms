@@ -16,7 +16,7 @@ export default function FeaturedCard(Props) {
           <p className="text-[13px]">{Props.featured.title}</p>
           <div className="flex justify-between items-center mt-2 px-1">
             <div className="text-[12px]">
-              <i className="fa fa-star text-[#fce253]"></i>{" "}
+              <i className="fa fa-star text-[#ff8a00]"></i>{" "}
               <span>{Props.featured.rating}</span>
             </div>
             <div>
