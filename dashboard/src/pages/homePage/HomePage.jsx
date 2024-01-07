@@ -8,6 +8,7 @@ import FeaturedCard from "../../compnents/Card/FeaturedCard";
 import HotDeals from "../../compnents/Card/HotDeals";
 import TopRated from "../../compnents/Card/TopRated";
 import img3 from "../../assets/images/person.png";
+import BrandsCard from "../../compnents/Card/BrandsCard";
 
 // const data = require('../../assets/api/data')
 
@@ -853,6 +854,39 @@ export default function HomePage() {
               Costumer
             </span>
           </div>
+        </div>
+      </div>
+
+      {/* Commercial Video */}
+      <div className="p-10">
+        <iframe
+          className="h-[100vh] w-full rounded-2xl"
+          src="https://www.youtube.com/embed/6OXfgu8uKnE?si=4dTKDGtQDJ_n9f9I"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      {/* Brands */}
+      <div className="p-10">
+        <div className="flex justify-between items-center">
+          <div className="text-[36px] font-bold">
+            <h1>Brands</h1>
+          </div>
+          <div className="">
+          <button className="text-[16px] font-bold text-[#0b3b72]">
+              View All &#160; <i className="fa fa-long-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div className="flex justify-normal overflow-auto">
+          {
+            data.slice(0,8).map((item) =>{
+              return <BrandsCard brands={item} />;
+            })
+          }
         </div>
       </div>
     </div>
