@@ -859,18 +859,11 @@ export default function HomePage() {
 
       {/* Commercial Video */}
       <div className="p-10">
-        <iframe
-          className="h-[100vh] w-full rounded-2xl"
-          src="https://www.youtube.com/embed/6OXfgu8uKnE?si=4dTKDGtQDJ_n9f9I"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+        <iframe className="h-[100vh] w-full rounded-2xl" src="https://www.youtube.com/embed/6OXfgu8uKnE?si=6hUHqWC8uiQYPn1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
 
       {/* Brands */}
-      <div className="p-10">
+      <div className="p-6">
         <div className="flex justify-between items-center">
           <div className="text-[36px] font-bold">
             <h1>Brands</h1>
@@ -881,9 +874,9 @@ export default function HomePage() {
             </button>
           </div>
         </div>
-        <div className="flex justify-normal overflow-auto">
+        <div className="flex justify-start gap-16">
           {
-            data.slice(0,8).map((item) =>{
+            data.slice(0,6).map((item) =>{
               return <BrandsCard brands={item} />;
             })
           }
