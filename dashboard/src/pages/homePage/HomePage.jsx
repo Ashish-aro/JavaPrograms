@@ -882,6 +882,18 @@ export default function HomePage() {
           }
         </div>
       </div>
+
+      {/* News Letter */}
+      <div className="bg-[#f2f2f2b4] flex justify-end items-center h-[100px] w-full">
+        <div className="">
+          <p className="font-bold text-[32px]">Subscribe our Newsletter</p>
+          <p className="text-[16px] text-[#919191]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque.</p>
+        </div>
+        <div className="">
+          <input className="p-3 w-[400px] rounded-s-full" type="text" placeholder="Your email address" />
+          <button className="p-3 bg-[#0b3b72] text-white rounded-full w-[120px] font-semibold">Subscribe</button>
+        </div>
+      </div>
     </div>
   );
 }
